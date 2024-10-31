@@ -1,12 +1,13 @@
-from utils import env
 from peewee import PostgresqlDatabase
+
+import config
 
 
 handler = PostgresqlDatabase(
-    database=env.get("DATABASE_NAME"),
-    user=env.get("USER"),
-    password=env.get("PASSWORD"),
-    host=env.get("DATABASE_HOST")
+    database=config.DATABASE_NAME,
+    user=config.USERNAME,
+    password=config.PASSWORD,
+    host=config.DB_HOST
 )
 
 

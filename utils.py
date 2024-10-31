@@ -1,8 +1,9 @@
 import telebot
-from os import environ as env
 from telebot import types
 
-bot = telebot.TeleBot(env.get("TELEGRAM_BOT_TOKEN"))
+import config
+
+bot = telebot.TeleBot(config.TG_API_KEY)
 
 
 def text_checker(func):
